@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="300.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.mycalculator.Controller">
+    <children>
+        <TextField fx:id="textField" editable="false" layoutX="25.0" layoutY="20.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="75.0" prefWidth="250.0" text="0">
+            <font>
+                <Font size="25.0" />
+            </font>
+        </TextField>
+        <FlowPane layoutX="25.0" layoutY="125.0" prefHeight="180.0" prefWidth="180.0" styleClass="mainPane">
+            <children>
+                <Button mnemonicParsing="false" onAction="#button1Clicked" styleClass="highlight" prefHeight="60.0" prefWidth="60.0" text="1"  >
+                    <font>
+                        <Font   name = "Arial" size="25.0" />
+                    </font>
+                </Button>
+                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#button2Clicked" styleClass="highlight"
+                        prefHeight="60.0" prefWidth="60.0" text="2" >
+                    <font>
+                        <Font name = "Arial" size="25.0" />
+                    </font>
+                </Button>
+                <Button layoutX="70.0" layoutY="10.0" mnemonicParsing="false" styleClass="highlight" onAction="#button3Clicked" prefHeight="60.0" prefWidth="60.0" text="3">
+                    <font>
+                        <Font size="25.0" />
+                    </font>
+                </Button>
+                <Button layoutX="130.0" layoutY="10.0" mnemonicParsing="false" styleClass="highlight" onAction="#button4Clicked" prefHeight="60.0" prefWidth="60.0" text="4">
+                    <font>
+                        <Font size="25.0" />
+                    </font>
+                </Button>
+                <Button layoutX="10.0" layoutY="70.0" mnemonicParsing="false" styleClass="highlight" onAction="#button5Clicked" prefHeight="60.0" prefWidth="60.0" text="5">
+                    <font>
+                        <Font size="25.0" />
+                    </font>
+                </Button>
+                <Button layoutX="70.0" layoutY="70.0" mnemonicParsing="false" styleClass="highlight" onAction="#button6Clicked" prefHeight="60.0" prefWidth="60.0" text="6">
+                    <font>
+                        <Font size="25.0" />
+                    </font>
+                </Button>
+                <Button layoutX="130.0" layoutY="70.0" mnemonicParsing="false" styleClass="highlight" onAction="#button7Clicked" prefHeight="60.0" prefWidth="60.0" text="7">
+                    <font>
+                        <Font size="25.0" />
+                    </font>
+                </Button>
+                <Button layoutX="10.0" layoutY="130.0" mnemonicParsing="false" styleClass="highlight" onAction="#button8Clicked" prefHeight="60.0" prefWidth="60.0" text="8">
+                    <font>
+                        <Font size="25.0" />
+                    </font>
+                </Button>
+                <Button layoutX="70.0" layoutY="130.0" mnemonicParsing="false"  styleClass="highlight" onAction="#button9Clicked" prefHeight="60.0" prefWidth="60.0" text="9">
+                    <font>
+                        <Font size="25.0" />
+                    </font>
+                </Button>
+                <Button mnemonicParsing="false" onAction="#clearTextField" styleClass="highlight"  prefHeight="60.0" prefWidth="60.0" text="C">
+                    <font>
+                        <Font size="25.0" />
+                    </font>
+                </Button>
+
+                <Button layoutX="70.0" layoutY="10.0" mnemonicParsing="false" styleClass="highlight" onAction="#button0Clicked" prefHeight="60.0" prefWidth="60.0" text="0">
+                    <font>
+                        <Font size="25.0" />
+                    </font>
+                </Button>
+                <Button mnemonicParsing="false" onAction="#calculate"  styleClass="highlight" prefHeight="60.0" prefWidth="60.0" text="=">
+                    <font>
+                        <Font size="25.0" />
+                    </font>
+                </Button>
+
+
+            </children>
+        </FlowPane>
+        <VBox layoutX="215.0" layoutY="125.0" prefHeight="240.0" prefWidth="60.0">
+            <children>
+                <Button layoutX="10.0" layoutY="172.0" mnemonicParsing="false"  styleClass="highlight" onAction="#multiplicationAction" prefHeight="60.0" prefWidth="60.0" text="*">
+                    <font>
+                        <Font size="25.0" />
+                    </font>
+                </Button>
+                <Button mnemonicParsing="false" onAction="#addAction"  styleClass="highlight" prefHeight="60.0" prefWidth="60.0" text="+">
+                    <font>
+                        <Font size="25.0" />
+                    </font>
+                </Button>
+                <Button layoutX="10.0" layoutY="70.0" mnemonicParsing="false"  styleClass="highlight" onAction="#minusAction" prefHeight="60.0" prefWidth="60.0" text="-">
+                    <font>
+                        <Font size="25.0" />
+                    </font>
+                </Button>
+                <Button layoutX="10.0" layoutY="130.0" mnemonicParsing="false"  styleClass="highlight" onAction="#divideAction" prefHeight="60.0" prefWidth="60.0" text="/">
+                    <font>
+                        <Font size="25.0" />
+                    </font>
+                </Button>
+
+            </children>
+        </VBox>
+        <Text fx:id="savedNumbers" layoutX="30.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+    </children>
+</AnchorPane>
+
